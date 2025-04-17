@@ -54,6 +54,13 @@ const display = () => {
         2: { cellWidth: 150 },
         3: { cellWidth: 50 },
         4: { cellWidth: 50 }
+      },
+      didDrawPage: (data) => {
+        // Footer
+        doc.setFontStyle('bold');
+        doc.setFontSize(10);
+        doc.text('Products List', data.settings.margin.left, 285);
+        doc.text(`Page ${data.pageCount}`, data.settings.margin.left, 290);
       }
     })
 
