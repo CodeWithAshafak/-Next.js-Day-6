@@ -56,8 +56,9 @@ const display = () => {
         4: { cellWidth: 50 }
       },
       didDrawPage: (data) => {
-        // Footer
-        doc.setFontStyle('bold');
+        
+        doc.setFont(undefined, 'bold');
+
         doc.setFontSize(10);
         doc.text('Products List', data.settings.margin.left, 285);
         doc.text(`Page ${data.pageCount}`, data.settings.margin.left, 290);

@@ -12,14 +12,13 @@ const DashHeader = () => {
   const { theme, setTheme } = useTheme();
   const [user, setUser] = useState("");
 
-  // Redirect to login if no session
   useEffect(() => {
     if (!session) {
       router.push("/");
     }
   }, [session, router]);
 
-  // Get user email from localStorage
+  
   useEffect(() => {
     const storedUser = localStorage.getItem("useremail");
     if (storedUser) {
